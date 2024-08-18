@@ -5,6 +5,8 @@ public class CmdCommands {
     public static final String WINGET_UPGRADE = "winget upgrade";
     public static final String WINGET_UPGRADE_ALL = "winget upgrade --all";
     public static final String VERSION = "--version";
+    public static final String CMD_EXE = "cmd.exe";
+    public static final String C = "/c";
 
     /**
      * Updates a specific version of a software using the Windows command line utility WINGET.

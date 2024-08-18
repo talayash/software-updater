@@ -61,7 +61,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                com.windowssoftwareupdater.softwareupdater/com.windowssoftwareupdater.softwareupdater.HelloApplication
+                                com.windowssoftwareupdater.softwareupdater/com.windowssoftwareupdater.softwareupdater.MainApplication
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
