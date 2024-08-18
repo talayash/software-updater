@@ -2,12 +2,12 @@ package com.windowssoftwareupdater.softwareupdater;
 
 import com.windowssoftwareupdater.softwareupdater.cmd.CmdExecutor;
 import com.windowssoftwareupdater.softwareupdater.pojo.SoftwareInfo;
+import com.windowssoftwareupdater.softwareupdater.util.CmdCommands;
 import com.windowssoftwareupdater.softwareupdater.util.SoftwareInfoUtil;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 import java.util.List;
 
@@ -18,7 +18,7 @@ public class HelloApplication extends Application {
         textArea.setEditable(false);
 
         // Execute command and show output
-        String cmdOutput = CmdExecutor.executeCommand("winget upgrade");
+        String cmdOutput = CmdExecutor.executeCommand(CmdCommands.WINGET_UPGRADE);
         List<SoftwareInfo> softwareList = SoftwareInfoUtil.parseWingetOutput(cmdOutput);
 
         StringBuilder displayText = new StringBuilder();
