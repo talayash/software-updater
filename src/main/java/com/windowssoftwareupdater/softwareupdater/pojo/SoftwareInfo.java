@@ -2,56 +2,69 @@ package com.windowssoftwareupdater.softwareupdater.pojo;
 
 public class SoftwareInfo {
     // Attributes
-    private String name;
-    private String currentVersion;
-    private String availableVersion;
-    private String source;
+    private String _name;
+    private String _id;
+    private String _currentVersion;
+    private String _availableVersion;
+    private String _source;
 
     // Constructor
-    public SoftwareInfo(String name, String currentVersion, String availableVersion, String source) {
-        this.name = name;
-        this.currentVersion = currentVersion;
-        this.availableVersion = availableVersion;
-        this.source = source;
+    public SoftwareInfo(String name, String id, String currentVersion, String availableVersion, String source) {
+        _name = name;
+        _id = id;
+        _currentVersion = currentVersion;
+        _availableVersion = availableVersion;
+        _source = source;
     }
 
-    // To String
     @Override
     public String toString() {
-        return "Name: " + name + ", Current Version: " + currentVersion +
-                ", Available Version: " + availableVersion + ", Source: " + source;
+        return "SoftwareInfo{" +
+                "_name='" + _name + '\'' +
+                ", _id='" + _id + '\'' +
+                ", _currentVersion='" + _currentVersion + '\'' +
+                ", _availableVersion='" + _availableVersion + '\'' +
+                ", _source='" + _source + '\'' +
+                '}';
     }
 
-    // Getters & Setters
-    public String getName() {
-        return name;
+    public String get_name() {
+        return _name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void set_name(String _name) {
+        this._name = _name;
     }
 
-    public String getCurrentVersion() {
-        return currentVersion;
+    public String get_id() {
+        return _id;
     }
 
-    public void setCurrentVersion(String currentVersion) {
-        this.currentVersion = currentVersion;
+    public void set_id(String _id) {
+        this._id = _id;
     }
 
-    public String getAvailableVersion() {
-        return availableVersion;
+    public String get_currentVersion() {
+        return _currentVersion;
     }
 
-    public void setAvailableVersion(String availableVersion) {
-        this.availableVersion = availableVersion;
+    public void set_currentVersion(String _currentVersion) {
+        this._currentVersion = _currentVersion;
     }
 
-    public String getSource() {
-        return source;
+    public String get_availableVersion() {
+        return _availableVersion;
     }
 
-    public void setSource(String source) {
-        this.source = source;
+    public void set_availableVersion(String _availableVersion) {
+        this._availableVersion = _availableVersion;
+    }
+
+    public String get_source() {
+        return _source;
+    }
+
+    public void set_source(String _source) {
+        this._source = _source;
     }
 }
