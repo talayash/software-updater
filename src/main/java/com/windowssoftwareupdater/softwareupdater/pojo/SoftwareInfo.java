@@ -1,70 +1,110 @@
 package com.windowssoftwareupdater.softwareupdater.pojo;
 
+import javafx.beans.property.SimpleBooleanProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+
 public class SoftwareInfo {
-    // Attributes
-    private String _name;
-    private String _id;
-    private String _currentVersion;
-    private String _availableVersion;
-    private String _source;
+    // Attributes as JavaFX properties
+    private final SimpleStringProperty name;
+    private final SimpleStringProperty id;
+    private final SimpleStringProperty currentVersion;
+    private final SimpleStringProperty availableVersion;
+    private final SimpleStringProperty source;
+    private final SimpleBooleanProperty selected;
 
     // Constructor
     public SoftwareInfo(String name, String id, String currentVersion, String availableVersion, String source) {
-        _name = name;
-        _id = id;
-        _currentVersion = currentVersion;
-        _availableVersion = availableVersion;
-        _source = source;
+        this.name = new SimpleStringProperty(name);
+        this.id = new SimpleStringProperty(id);
+        this.currentVersion = new SimpleStringProperty(currentVersion);
+        this.availableVersion = new SimpleStringProperty(availableVersion);
+        this.source = new SimpleStringProperty(source);
+        this.selected = new SimpleBooleanProperty(false);  // Default not selected
+    }
+
+    // Getters and setters for JavaFX properties
+    public String getName() {
+        return name.get();
+    }
+
+    public StringProperty nameProperty() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name.set(name);
+    }
+
+    public String getId() {
+        return id.get();
+    }
+
+    public StringProperty idProperty() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id.set(id);
+    }
+
+    public String getCurrentVersion() {
+        return currentVersion.get();
+    }
+
+    public StringProperty currentVersionProperty() {
+        return currentVersion;
+    }
+
+    public void setCurrentVersion(String currentVersion) {
+        this.currentVersion.set(currentVersion);
+    }
+
+    public String getAvailableVersion() {
+        return availableVersion.get();
+    }
+
+    public StringProperty availableVersionProperty() {
+        return availableVersion;
+    }
+
+    public void setAvailableVersion(String availableVersion) {
+        this.availableVersion.set(availableVersion);
+    }
+
+    public String getSource() {
+        return source.get();
+    }
+
+    public StringProperty sourceProperty() {
+        return source;
+    }
+
+    public void setSource(String source) {
+        this.source.set(source);
+    }
+
+    public boolean isSelected() {
+        return selected.get();
+    }
+
+    public SimpleBooleanProperty selectedProperty() {
+        return selected;
+    }
+
+    public void setSelected(boolean selected) {
+        this.selected.set(selected);
     }
 
     @Override
     public String toString() {
         return "SoftwareInfo{" +
-                "_name='" + _name + '\'' +
-                ", _id='" + _id + '\'' +
-                ", _currentVersion='" + _currentVersion + '\'' +
-                ", _availableVersion='" + _availableVersion + '\'' +
-                ", _source='" + _source + '\'' +
+                "name='" + name.get() + '\'' +
+                ", id='" + id.get() + '\'' +
+                ", currentVersion='" + currentVersion.get() + '\'' +
+                ", availableVersion='" + availableVersion.get() + '\'' +
+                ", source='" + source.get() + '\'' +
+                ", selected=" + selected.get() +
                 '}';
-    }
-
-    public String get_name() {
-        return _name;
-    }
-
-    public void set_name(String _name) {
-        this._name = _name;
-    }
-
-    public String get_id() {
-        return _id;
-    }
-
-    public void set_id(String _id) {
-        this._id = _id;
-    }
-
-    public String get_currentVersion() {
-        return _currentVersion;
-    }
-
-    public void set_currentVersion(String _currentVersion) {
-        this._currentVersion = _currentVersion;
-    }
-
-    public String get_availableVersion() {
-        return _availableVersion;
-    }
-
-    public void set_availableVersion(String _availableVersion) {
-        this._availableVersion = _availableVersion;
-    }
-
-    public String get_source() {
-        return _source;
-    }
-
-    public void set_source(String _source) {
-        this._source = _source;
     }
 }
