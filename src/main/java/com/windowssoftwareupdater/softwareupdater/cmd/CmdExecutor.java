@@ -3,8 +3,8 @@ package com.windowssoftwareupdater.softwareupdater.cmd;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import static com.windowssoftwareupdater.softwareupdater.util.CmdCommands.C;
-import static com.windowssoftwareupdater.softwareupdater.util.CmdCommands.CMD_EXE;
+import static com.windowssoftwareupdater.softwareupdater.util.CmdUtil.C;
+import static com.windowssoftwareupdater.softwareupdater.util.CmdUtil.CMD_EXE;
 
 public class CmdExecutor {
 
