@@ -5,6 +5,7 @@ public class CmdUtil {
     public static final String WINGET_UPGRADE = "winget upgrade";
     public static final String WINGET_UPGRADE_ALL = "winget upgrade --all";
     public static final String VERSION = "--version";
+    public static final String ID = "--id";
     public static final String CMD_EXE = "cmd.exe";
     public static final String C = "/c";
 
@@ -18,6 +19,17 @@ public class CmdUtil {
      */
     public static String updateSpecificVersion(String softwareName, String targetVersion) {
         return WINGET_UPGRADE + " " + softwareName + VERSION + " " + targetVersion;
+    }
+
+    /**
+     * Constructs and returns a command string to update a specific application
+     * using the Windows command line utility WINGET.
+     *
+     * @param applicationId the identifier of the application to update
+     * @return the command string to execute for updating the specific application
+     */
+    public static String updateSpecificApplication(String applicationId) {
+        return WINGET_UPGRADE + " " + ID + " " + applicationId;
     }
 
     /**
